@@ -25,13 +25,13 @@
                     <h2 class="card-title text-2xl font-bold">Triangle</h2>
                     <p>Area (A) = 0.5 x b x h</p>
                     <div class="flex gap-3 items-center mt-3 mb-7">
-                        <input name="b" type="text" placeholder="b" class="input h-6 w-16 bg-stone-100" />
+                        <input id="b" name="b" type="text" placeholder="b" class="input h-6 w-16 bg-stone-100" />
                         <p>cm</p>
-                        <input name="h" type="text" placeholder="h" class="input h-6 w-16 bg-stone-100" />
+                        <input id="h" name="h" type="text" placeholder="h" class="input h-6 w-16 bg-stone-100" />
                         <p>cm</p>
                     </div>
                     <div class="card-actions">
-                        <button class="btn bg-sky-500 text-white hover:bg-sky-800 btn-wide">Calculate</button>
+                        <button onclick="traiangle()" class="btn bg-sky-500 text-white hover:bg-sky-800 btn-wide">Calculate</button>
                     </div>
                 </div>
             </div>
@@ -45,13 +45,13 @@
                     <h2 class="card-title text-2xl font-bold">Rectangle</h2>
                     <p>Area (A) = w x l</p>
                     <div class="flex gap-3 items-center mt-3 mb-7">
-                        <input name="w" type="text" placeholder="w" class="input h-6 w-16 bg-stone-100" />
+                        <input id="w" type="text" placeholder="w" class="input h-6 w-16 bg-stone-100" />
                         <p>cm</p>
-                        <input name="l" type="text" placeholder="l" class="input h-6 w-16 bg-stone-100" />
+                        <input id="l" type="text" placeholder="l" class="input h-6 w-16 bg-stone-100" />
                         <p>cm</p>
                     </div>
                     <div class="card-actions">
-                        <button class="btn bg-sky-500 text-white hover:bg-sky-800 btn-wide">Calculate</button>
+                        <button onclick="rCalculate()" class="btn bg-sky-500 text-white hover:bg-sky-800 btn-wide">Calculate</button>
                     </div>
                 </div>
             </div>
@@ -65,13 +65,13 @@
                     <h2 class="card-title text-2xl font-bold">Parallelogram</h2>
                     <p>Area (A) = b x h</p>
                     <div class="flex gap-3 items-center mt-3 mb-7">
-                        <input name="b" type="text" placeholder="b" class="input h-6 w-16 bg-stone-100" />
+                        <input id="b1" type="text" placeholder="b" class="input h-6 w-16 bg-stone-100" />
                         <p>cm</p>
-                        <input name="h" type="text" placeholder="h" class="input h-6 w-16 bg-stone-100" />
+                        <input id="h1" type="text" placeholder="h" class="input h-6 w-16 bg-stone-100" />
                         <p>cm</p>
                     </div>
                     <div class="card-actions">
-                        <button class="btn bg-sky-500 text-white hover:bg-sky-800 btn-wide">Calculate</button>
+                        <button onclick="a()" class="btn bg-sky-500 text-white hover:bg-sky-800 btn-wide">Calculate</button>
                     </div>
                 </div>
             </div>
@@ -136,14 +136,16 @@
         </section>
 
         <!-- right side -->
-        <section class="h-screen  border-gray-200 border rounded-lg px-20 pt-6">
-            <h4 class="font-bold underline text-2xl">Area Calculation</h4>
-            <ol id="order-list">
-
-            </ol>
+        <section class=" border-gray-200 border rounded-lg w-96 px-5 pt-6">
+            <h4 class="font-bold underline text-2xl text-center">Area Calculation</h4>
+            <div class="flex justify-center mt-6">
+                <ul id="order-list" class="list-decimal">
+                </ul>
+            </div>
         </section>
 
     </main>
+    <script src="js/utilitis.js"></script>
     <script src="js/index.js"></script>
 </body>
 
