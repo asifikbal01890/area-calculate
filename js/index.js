@@ -10,10 +10,10 @@ function traiangle() {
         const areaCalculate = document.getElementById('order-list')
         const li = document.createElement('li');
         li.innerHTML = `
-            <div class = "flex items-center gap-3">
+            <div id="container" class = "flex items-center gap-3">
                 <p>Triangle</p>
-                <p>${area} cm^2</p>
-                <button class="btn bg-sky-500 text-white hover:bg-sky-800">Convert to m^2</button>
+                <p><span id="area">${area}</span> cm^2</p>
+                <button id="covert-btn" onclick="convert()" class="btn bg-sky-500 text-white hover:bg-sky-800">Convert to m^2</button>
             </div>
                         `;
         areaCalculate.appendChild(li)
@@ -22,6 +22,20 @@ function traiangle() {
         document.getElementById('b').value = '';
         document.getElementById('h').value = '';
     }
+}
+
+// cm to m convert button function
+ function convert (){
+    const areaString = document.getElementById('area').innerText;
+    const areaNumber = parseFloat(areaString);
+    const cmToM = areaNumber / 100;
+    const btn = document.getElementById('covert-btn');
+    const p = document.createElement('p');
+    p.innerText = `= ${cmToM} m^2`;
+    btn.remove()
+    document.getElementById('container').appendChild(p)   
+    document.getElementById('container').id = 'text';
+    document.getElementById('area').id = 'none'    
 }
 
 function rCalculate() {
